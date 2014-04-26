@@ -18,6 +18,7 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:3.2.0.RELEASE" />
           <element id="library" level="project" name="Maven: javax.servlet:servlet-api:2.5" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:3.2.0.RELEASE" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.30" />
         </element>
       </element>
     </root>
