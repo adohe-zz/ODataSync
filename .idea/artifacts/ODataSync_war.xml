@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="ODataSync:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="ODataSync.war">
+      <element id="artifact" artifact-name="ODataSync:war exploded" />
+    </root>
+  </artifact>
+</component>
