@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53900365-a49e-461b-9b7e-7c77746e5eee" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/DBMetadata.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/Metadata.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/MetadataParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/TableMetadata.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ado/java/odata/service/impl/ODataServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/ado/java/odata/service/impl/ODataServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/Column.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/MetadataParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/MetadataParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/TableMetadata.java" afterPath="$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/TableMetadata.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ODataSync.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1398726388231" ignored="false" />
+    <file path="/Dummy.txt" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1398765608617" ignored="false" />
     <file path="/web.xml" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1398529352647" ignored="false" />
     <file path="/servlet-context.xml" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1398530592015" ignored="false" />
     <file path="/ODataController.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1398530700021" ignored="false" />
@@ -24,9 +22,11 @@
     <file path="/ConfigException.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1398583010549" ignored="false" />
     <file path="/ODataServiceImpl.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1398598340364" ignored="false" />
     <file path="/Metadata.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1398698443252" ignored="false" />
-    <file path="/TableMetadata.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1398699773605" ignored="false" />
+    <file path="/TableMetadata.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1398768558241" ignored="false" />
     <file path="/DBMetadata.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1398698464231" ignored="false" />
-    <file path="/MetadataParser.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1398698537777" ignored="false" />
+    <file path="/MetadataParser.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1398768595538" ignored="false" />
+    <file path="/Columns.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1398767358754" ignored="false" />
+    <file path="/Column.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1398767357847" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,15 +96,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ODataServiceImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/service/impl/ODataServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="49" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Pool.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/pool/Pool.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -125,10 +116,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MetadataParser.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MetadataParser.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/MetadataParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="20" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0">
+            <state line="21" column="8" selection-start="746" selection-end="746" vertical-scroll-proportion="0.52238804">
               <folding />
             </state>
           </provider>
@@ -143,13 +134,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TableMetadata.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TableMetadata.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/TableMetadata.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="14" selection-start="521" selection-end="521" vertical-scroll-proportion="0.74626863">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="37" column="29" selection-start="648" selection-end="648" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Column.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/Column.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="51" column="27" selection-start="1057" selection-end="1057" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -157,7 +155,7 @@
       <file leaf-file-name="DBMetadata.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/DBMetadata.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="38" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0">
+            <state line="9" column="17" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -166,7 +164,7 @@
       <file leaf-file-name="ConfigException.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/pool/ConfigException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="25" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0">
+            <state line="10" column="3" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -199,8 +197,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/test.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/ODataServlet/servlet-context.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/controller/ODataController.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -213,8 +209,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/pool/ConnectionPool.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/Metadata.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/DBMetadata.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/MetadataParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/Columns.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/Column.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/TableMetadata.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/MetadataParser.java" />
       </list>
     </option>
   </component>
@@ -781,22 +779,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="29" selection-start="709" selection-end="709" vertical-scroll-proportion="-10.0">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="6" selection-start="231" selection-end="231" vertical-scroll-proportion="-5.625" />
@@ -839,7 +821,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/pool/ConfigException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="25" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0">
+        <state line="10" column="3" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -858,32 +840,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/pool/ConnectionPool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="217" column="57" selection-start="8505" selection-end="8517" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/Metadata.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="16" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/DBMetadata.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="38" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/MetadataParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="20" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -895,12 +854,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/TableMetadata.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/DBMetadata.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="14" selection-start="521" selection-end="521" vertical-scroll-proportion="0.74626863">
+        <state line="9" column="17" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/Column.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="27" selection-start="1057" selection-end="1057" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/pool/ConnectionPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="217" column="57" selection-start="8505" selection-end="8517" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/TableMetadata.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="29" selection-start="648" selection-end="648" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/MetadataParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="8" selection-start="746" selection-end="746" vertical-scroll-proportion="0.52238804">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -1,7 +1,6 @@
 package com.ado.java.odata.parser;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
@@ -20,7 +19,7 @@ public class TableMetadata implements Metadata {
     /**
      * Table columns
      */
-    private Map<String, String> columns;
+    private List<Column> columns;
 
     /**
      * The primary key
@@ -31,4 +30,40 @@ public class TableMetadata implements Metadata {
      * Indexes
      */
     private List<String> indexes;
+
+    public TableMetadata(String tableName) {
+        this.name = tableName;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<Column> getColumns() {
+        return columns;
+    }
+
+    public void setColumns(List<Column> columns) {
+        this.columns = columns;
+    }
+
+    public String getPrimaryKey() {
+        return primaryKey;
+    }
+
+    public void setPrimaryKey(String primaryKey) {
+        this.primaryKey = primaryKey;
+    }
+
+    public List<String> getIndexes() {
+        return indexes;
+    }
+
+    public void setIndexes(List<String> indexes) {
+        this.indexes = indexes;
+    }
 }

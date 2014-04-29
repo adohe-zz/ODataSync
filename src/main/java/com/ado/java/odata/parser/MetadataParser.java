@@ -11,7 +11,17 @@ import com.mysql.jdbc.DatabaseMetaData;
  */
 public class MetadataParser {
 
-    public static Metadata parser(DatabaseMetaData metaData) {
-        return null;
+    /**
+     * Parser the {@link com.mysql.jdbc.DatabaseMetaData} for a table
+     * to constructor it's own {@link com.ado.java.odata.parser.TableMetadata}
+     * @param metaData {@link com.mysql.jdbc.DatabaseMetaData} the database metadata for a table
+     * @param tableName {@link String} the table name
+     * @return {@link com.ado.java.odata.parser.Metadata} a specific table metadata
+     */
+    public static Metadata parser(DatabaseMetaData metaData, String tableName) {
+
+        TableMetadata metadata = new TableMetadata(tableName);
+
+        return metadata;
     }
 }
