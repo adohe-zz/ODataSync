@@ -103,7 +103,7 @@
       <file leaf-file-name="ConnectionPool.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/pool/ConnectionPool.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="36" selection-start="861" selection-end="861" vertical-scroll-proportion="0.5574324">
+            <state line="33" column="36" selection-start="861" selection-end="861" vertical-scroll-proportion="0.55932206">
               <folding />
             </state>
           </provider>
@@ -877,7 +877,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/pool/ConnectionPool.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="36" selection-start="861" selection-end="861" vertical-scroll-proportion="0.5574324">
+        <state line="33" column="36" selection-start="861" selection-end="861" vertical-scroll-proportion="0.55932206">
           <folding />
         </state>
       </provider>
