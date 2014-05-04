@@ -73,7 +73,35 @@ public class ConnectionPool implements Pool {
      */
     private BlockingQueue<Connection> availableConnections;
 
+    /**
+     * Config file
+     */
     private Config config;
+
+    /**
+     * Singleton Instance
+     */
+    private volatile static ConnectionPool pool;
+
+    /**
+     * The only public get method
+     * @param username Username access to database
+     * @param password Password access to database
+     * @param url Jdbc connect url
+     * @return A valid ConnectionPool instance
+     * @throws SQLException
+     */
+    public static ConnectionPool getPool(String username, String password, String url) throws SQLException {
+        if (pool == null) {
+            synchronized (ConnectionPool.class) {
+                if (pool == null) {
+                    pool = new ConnectionPool(username, password, url);
+                }
+            }
+        }
+
+        return pool;
+    }
 
     /**
      * Constructor with a given {@link Config}
@@ -86,7 +114,7 @@ public class ConnectionPool implements Pool {
      * @throws SQLException - if the properties do not pass sanity check by {@link #propertiesValidate()} ()}
      *                        or failures occur while making a {@link java.sql.Connection}
      */
-    public ConnectionPool(Config config, String username, String password, String url) throws SQLException {
+    private ConnectionPool(Config config, String username, String password, String url) throws SQLException {
         this.url = url;
         this.username = username;
         this.password = password;
@@ -105,7 +133,7 @@ public class ConnectionPool implements Pool {
      * @throws SQLException - if the properties do not pass sanity check by {@link #propertiesValidate()} ()}
      *                        or failures occur while making a {@link java.sql.Connection}
      */
-    public ConnectionPool(Properties properties, String username, String password, String url) throws SQLException {
+    private ConnectionPool(Properties properties, String username, String password, String url) throws SQLException {
         this(new ConnectionPoolConfig(properties), username, password, url);
     }
 
@@ -119,7 +147,7 @@ public class ConnectionPool implements Pool {
      * @throws SQLException - if the properties do not pass sanity check by {@link #propertiesValidate()} ()}
      *                        or failures occur while making a {@link java.sql.Connection}
      */
-    public ConnectionPool(String username, String password, String url) throws SQLException {
+    private ConnectionPool(String username, String password, String url) throws SQLException {
         this(new ConnectionPoolConfig(true), username, password, url);
     }
 
