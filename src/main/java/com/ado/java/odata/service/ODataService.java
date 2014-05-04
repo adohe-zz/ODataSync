@@ -8,4 +8,7 @@ package com.ado.java.odata.service;
  * To change this template use File | Settings | File Templates.
  */
 public interface ODataService {
+
+    void syncData(String tableName);
+
 }

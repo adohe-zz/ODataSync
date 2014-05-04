@@ -1,7 +1,10 @@
 package com.ado.java.odata.controller;
 
+import com.ado.java.odata.service.ODataService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,13 +16,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class ODataController {
 
-    @RequestMapping( value = "/" )
-    public String test() {
-        return "test";
-    }
+    @Autowired
+    private ODataService oDataService;
 
-    @RequestMapping( value = "test")
-    public String index() {
-        return "index";
+    @RequestMapping( value = "sync")
+    public String syncDataForTable(@RequestParam String tableName) {
+        oDataService.syncData(tableName);
+        return "ok";
     }
 }

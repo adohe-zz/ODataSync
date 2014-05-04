@@ -1,6 +1,9 @@
 package com.ado.java.odata.service.impl;
 
+import com.ado.java.odata.dao.ODataDao;
 import com.ado.java.odata.service.ODataService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * Created with IntelliJ IDEA.
@@ -9,5 +12,14 @@ import com.ado.java.odata.service.ODataService;
  * Time: 上午1:06
  * To change this template use File | Settings | File Templates.
  */
+@Service("odataservice")
 public class ODataServiceImpl implements ODataService {
+
+    @Autowired
+    private ODataDao oDataDao;
+
+    @Override
+    public void syncData(String tableName) {
+        oDataDao.syncData(tableName);
+    }
 }
