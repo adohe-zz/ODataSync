@@ -12,6 +12,16 @@ import java.util.List;
 public class TableMetadata implements Metadata {
 
     /**
+     * Table category name
+     */
+    private String category;
+
+    /**
+     * Table schema name
+     */
+    private String schema;
+
+    /**
      * Table name
      */
     private String name;
@@ -65,5 +75,21 @@ public class TableMetadata implements Metadata {
 
     public void setIndexes(List<String> indexes) {
         this.indexes = indexes;
+    }
+
+    public String getSchema() {
+        return schema;
+    }
+
+    public void setSchema(String schema) {
+        this.schema = schema;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 }

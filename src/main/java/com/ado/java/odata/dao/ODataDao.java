@@ -1,5 +1,7 @@
 package com.ado.java.odata.dao;
 
+import com.ado.java.odata.parser.MetadataParser;
+import com.ado.java.odata.parser.TableMetadata;
 import com.ado.java.odata.pool.ConnectionPool;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -34,6 +36,8 @@ public class ODataDao {
         try {
             ConnectionPool pool = ConnectionPool.getPool(userName, password, url);
             Connection connection = pool.getConnection();
+
+            TableMetadata metadata = (TableMetadata)MetadataParser.parser(connection.getMetaData(), tableName);
             System.out.println(connection.getCatalog());
         } catch (SQLException e) {
             e.printStackTrace();

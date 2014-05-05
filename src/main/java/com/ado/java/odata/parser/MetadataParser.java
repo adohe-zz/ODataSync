@@ -1,6 +1,11 @@
 package com.ado.java.odata.parser;
 
-import com.mysql.jdbc.DatabaseMetaData;
+
+import java.sql.DatabaseMetaData;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -20,8 +25,35 @@ public class MetadataParser {
      */
     public static Metadata parser(DatabaseMetaData metaData, String tableName) {
 
-        TableMetadata metadata = new TableMetadata(tableName);
+        try {
+            ResultSet rs = metaData.getTables(null, null, tableName, new String[]{"TABLE"});
+            if (rs.next()) {
+                TableMetadata tableMetadata = new TableMetadata(tableName);
 
-        return metadata;
+                // Parse the primary key
+                rs = metaData.getPrimaryKeys("wecampus_dev", null, tableName);
+                while (rs.next()) {
+                    tableMetadata.setPrimaryKey(rs.getString(6));
+                }
+
+                // Parse the columns
+                rs = metaData.getColumns("wecampus_dev", null, tableName, null);
+                List<Column> columnList = new ArrayList<Column>();
+                while (rs.next()) {
+                    String name = rs.getString("COLUMN_NAME");
+                    String type = rs.getString("TYPE_NAME");
+                    int size = rs.getInt("COLUMN_SIZE");
+                    boolean nullable = rs.getInt("NULLABLE") == 1 ? true : false;
+                    columnList.add(new Column(name, type, size, nullable));
+                }
+                tableMetadata.setColumns(columnList);
+                return tableMetadata;
+            } else {
+                return null;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }
