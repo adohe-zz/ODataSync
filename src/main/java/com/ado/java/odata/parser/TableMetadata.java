@@ -1,6 +1,11 @@
 package com.ado.java.odata.parser;
 
+import java.sql.DatabaseMetaData;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
@@ -11,85 +16,48 @@ import java.util.List;
  */
 public class TableMetadata implements Metadata {
 
-    /**
-     * Table category name
-     */
-    private String category;
+    private final String category;
+    private final String schema;
+    private final String name;
+    private final Map<String, ColumnMetadata> columns = new HashMap<String, ColumnMetadata>();
+    private final Map<String, IndexMetadata> indexes = new HashMap<String, IndexMetadata>();
 
-    /**
-     * Table schema name
-     */
-    private String schema;
-
-    /**
-     * Table name
-     */
-    private String name;
-
-    /**
-     * Table columns
-     */
-    private List<Column> columns;
-
-    /**
-     * The primary key
-     */
-    private String primaryKey;
-
-    /**
-     * Indexes
-     */
-    private List<String> indexes;
-
-    public TableMetadata(String tableName) {
-        this.name = tableName;
+    public TableMetadata(ResultSet rs, DatabaseMetaData meta, boolean extras) throws SQLException {
+        category = rs.getString("TABLE_CAT");
+        schema = rs.getString("TABLE_SCHEMA");
+        name = rs.getString("TABLE_NAME");
     }
 
-    public String getName() {
-        return name;
+    private ColumnMetadata getColumnMetadata(String columnNmae) {
+        return columns.get(columnNmae.toLowerCase());
     }
 
-    public void setName(String name) {
-        this.name = name;
+    private void initColumns(DatabaseMetaData metaData) throws SQLException {
+        ResultSet rs = null;
+
+        try {
+            rs = metaData.getColumns(category, schema, name, "%");
+            while (rs.next()) {
+                addColumn(rs);
+            }
+        }
+        finally {
+            if (rs != null) {
+                rs.close();
+            }
+        }
     }
 
-    public List<Column> getColumns() {
-        return columns;
-    }
+    private void addColumn(ResultSet rs) throws SQLException {
+        String column = rs.getString("COLUMN_NAME");
 
-    public void setColumns(List<Column> columns) {
-        this.columns = columns;
-    }
+        if (column == null) {
+            return;
+        }
 
-    public String getPrimaryKey() {
-        return primaryKey;
-    }
-
-    public void setPrimaryKey(String primaryKey) {
-        this.primaryKey = primaryKey;
-    }
-
-    public List<String> getIndexes() {
-        return indexes;
-    }
-
-    public void setIndexes(List<String> indexes) {
-        this.indexes = indexes;
-    }
-
-    public String getSchema() {
-        return schema;
-    }
-
-    public void setSchema(String schema) {
-        this.schema = schema;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
+        if (getColumnMetadata(column) == null) {
+            ColumnMetadata info = new ColumnMetadata(rs);
+            columns.put(info.getName().toLowerCase(), info);
+        }
     }
 }

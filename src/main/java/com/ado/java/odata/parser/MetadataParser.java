@@ -1,6 +1,10 @@
 package com.ado.java.odata.parser;
 
 
+import org.hibernate.dialect.Dialect;
+import org.hibernate.dialect.MySQLDialect;
+
+import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -25,7 +29,7 @@ public class MetadataParser {
      */
     public static Metadata parser(DatabaseMetaData metaData, String tableName) {
 
-        try {
+        /*try {
             ResultSet rs = metaData.getTables(null, null, tableName, new String[]{"TABLE"});
             if (rs.next()) {
                 TableMetadata tableMetadata = new TableMetadata(tableName);
@@ -54,6 +58,12 @@ public class MetadataParser {
         } catch (SQLException e) {
             e.printStackTrace();
             return null;
-        }
+        }*/
+        return null;
+    }
+
+    public static Metadata parser(Connection connection, String tableName) throws SQLException {
+        DatabaseMetadata databaseMetaData = new DatabaseMetadata(connection, new MySQLDialect());
+        return databaseMetaData.getTableMetadata(connection.getCatalog(), connection.getSchema(), tableName, false);
     }
 }
