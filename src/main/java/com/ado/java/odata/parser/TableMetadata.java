@@ -24,8 +24,9 @@ public class TableMetadata implements Metadata {
 
     public TableMetadata(ResultSet rs, DatabaseMetaData meta, boolean extras) throws SQLException {
         category = rs.getString("TABLE_CAT");
-        schema = rs.getString("TABLE_SCHEMA");
+        schema = rs.getString("TABLE_SCHEM");
         name = rs.getString("TABLE_NAME");
+        initColumns(meta);
     }
 
     private ColumnMetadata getColumnMetadata(String columnNmae) {

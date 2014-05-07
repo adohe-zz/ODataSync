@@ -37,7 +37,7 @@ public class ODataDao {
             ConnectionPool pool = ConnectionPool.getPool(userName, password, url);
             Connection connection = pool.getConnection();
 
-            TableMetadata metadata = (TableMetadata)MetadataParser.parser(connection.getMetaData(), tableName);
+            TableMetadata metadata = (TableMetadata)MetadataParser.parser(connection, tableName);
             System.out.println(connection.getCatalog());
         } catch (SQLException e) {
             e.printStackTrace();
