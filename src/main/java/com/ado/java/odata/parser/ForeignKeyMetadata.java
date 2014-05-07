@@ -35,7 +35,7 @@ public class ForeignKeyMetadata {
     }
 
     public void addReference(ResultSet rs) throws SQLException {
-        references.put(rs.getString("FKCOLUMN_NAME").toLowerCase(), rs.getString("FKCOLUMN_NAME"));
+        references.put(rs.getString("FKCOLUMN_NAME").toLowerCase(), rs.getString("PKCOLUMN_NAME"));
     }
 
     private boolean hasReference(Column column, Column ref) {
