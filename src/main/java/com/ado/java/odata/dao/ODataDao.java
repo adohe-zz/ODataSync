@@ -1,13 +1,13 @@
 package com.ado.java.odata.dao;
 
-import com.ado.java.odata.parser.MetadataParser;
-import com.ado.java.odata.parser.TableMetadata;
+import com.ado.java.odata.parser.*;
 import com.ado.java.odata.pool.ConnectionPool;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
@@ -38,6 +38,10 @@ public class ODataDao {
             Connection connection = pool.getConnection();
 
             TableMetadata metadata = (TableMetadata)MetadataParser.parser(connection, tableName);
+
+            Map<String, ColumnMetadata> columns = metadata.getColumns();
+            Map<String, IndexMetadata> indexes = metadata.getIndexes();
+            Map<String, ForeignKeyMetadata> fkMeta = metadata.getForeignKeys();
             System.out.println(connection.getCatalog());
         } catch (SQLException e) {
             e.printStackTrace();

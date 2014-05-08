@@ -29,7 +29,7 @@ public class TableMetadata implements Metadata {
         name = rs.getString("TABLE_NAME");
         initColumns(meta);
         if (extras) {
-            initForeignKeys(meta);
+            initIndexes(meta);
             initForeignKeys(meta);
         }
     }
