@@ -25,10 +25,16 @@ public class ODataController {
         return "index";
     }
 
-    @RequestMapping( value = "sync")
+    @RequestMapping( value = "data")
     @ResponseBody
     public String syncDataForTable(@RequestParam String name) {
         oDataService.syncData(name);
+        return "ok";
+    }
+
+    @RequestMapping( value = "metadata")
+    @ResponseBody
+    public String syncMetadataForTable(@RequestParam String name) {
         return "ok";
     }
 }

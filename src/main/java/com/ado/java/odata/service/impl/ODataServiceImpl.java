@@ -22,4 +22,9 @@ public class ODataServiceImpl implements ODataService {
     public void syncData(String tableName) {
         oDataDao.syncData(tableName);
     }
+
+    @Override
+    public void syncMetadata(String tableName) {
+
+    }
 }

@@ -35,6 +35,24 @@ public class ODataDao {
     private String url;
 
     /**
+     * Sync meta-data for a table
+     *
+     * @param tableName The table name
+     */
+    private void syncMetadata(String tableName) {
+        try {
+            ConnectionPool pool = ConnectionPool.getPool(userName, password, url);
+            Connection connection = pool.getConnection();
+
+            TableMetadata metadata = (TableMetadata)MetadataParser.parser(connection, tableName);
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
      * Sync data for {@link java.lang.String} table name
      * @param tableName The table name
      */
@@ -51,7 +69,7 @@ public class ODataDao {
             Map<String, ForeignKeyMetadata> fkMeta = metadata.getForeignKeys();
 
             // Update the entities collection
-            /*MongoManager mongoManager = MongoManager.getInstance("localhost", 27017, 10, 10);
+            MongoManager mongoManager = MongoManager.getInstance("localhost", 27017, 10, 10);
             DB odata = mongoManager.getDB("odata");
 
             // Fetch the entities collection
@@ -81,7 +99,7 @@ public class ODataDao {
             // Insert into collection
             entities.insert(object);
             Set<String> collections = odata.getCollectionNames();
-            System.out.println(collections.size());*/
+            System.out.println(collections.size());
         } catch (SQLException e) {
             e.printStackTrace();
         }

@@ -11,4 +11,6 @@ public interface ODataService {
 
     void syncData(String tableName);
 
+    void syncMetadata(String tableName);
+
 }
