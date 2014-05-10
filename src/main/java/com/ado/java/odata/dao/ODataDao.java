@@ -1,13 +1,19 @@
 package com.ado.java.odata.dao;
 
+import com.ado.java.odata.mongo.MongoManager;
 import com.ado.java.odata.parser.*;
 import com.ado.java.odata.pool.ConnectionPool;
+import com.mongodb.BasicDBObject;
+import com.mongodb.DB;
+import com.mongodb.DBCollection;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Created with IntelliJ IDEA.
@@ -42,7 +48,39 @@ public class ODataDao {
             Map<String, ColumnMetadata> columns = metadata.getColumns();
             Map<String, IndexMetadata> indexes = metadata.getIndexes();
             Map<String, ForeignKeyMetadata> fkMeta = metadata.getForeignKeys();
-            System.out.println(connection.getCatalog());
+
+            // Update the entities collection
+            MongoManager mongoManager = MongoManager.getInstance("localhost", 27017, 10, 10);
+            DB odata = mongoManager.getDB("odata");
+
+            // Fetch the entities collection
+            DBCollection entities = odata.getCollection("entities");
+
+            // Create a new document
+            BasicDBObject object = new BasicDBObject("EntityName", "Buyer Insight")
+                    .append("ProjectName", "FirstPro").append("Source", "buyer").append("Table", tableName)
+                    .append("Cache", "no cache").append("Env", "dev").append("Status", "pending").append("RowCount", 0);
+            BasicDBObject properties = new BasicDBObject();
+
+            // Reverse the columns
+            Iterator iterator = columns.entrySet().iterator();
+            while (iterator.hasNext()) {
+                Map.Entry<String, ColumnMetadata> entry = (Map.Entry)iterator.next();
+                String key = entry.getKey();
+                ColumnMetadata columnMetadata = entry.getValue();
+
+                BasicDBObject column = new BasicDBObject();
+                column.append("type", columnMetadata.getTypeName())
+                    .append("nullable", columnMetadata.getNullable() == "YES" ? true : false);
+                properties.append(key, column);
+            }
+
+            object.append("Properties", properties);
+
+            // Insert into collection
+            entities.insert(object);
+            Set<String> collections = odata.getCollectionNames();
+            System.out.println(collections.size());
         } catch (SQLException e) {
             e.printStackTrace();
         }

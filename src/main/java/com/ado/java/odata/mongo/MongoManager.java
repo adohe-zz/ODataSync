@@ -1,12 +1,10 @@
 package com.ado.java.odata.mongo;
 
-import com.ado.java.odata.pool.Config;
 import com.mongodb.DB;
 import com.mongodb.Mongo;
 import com.mongodb.MongoOptions;
 
 import java.net.UnknownHostException;
-import java.util.Properties;
 
 /**
  * Created with IntelliJ IDEA.
