@@ -35,6 +35,7 @@ public class ODataController {
     @RequestMapping( value = "metadata")
     @ResponseBody
     public String syncMetadataForTable(@RequestParam String name) {
+        oDataService.syncMetadata(name);
         return "ok";
     }
 }

@@ -39,13 +39,13 @@ public class ODataDao {
      *
      * @param tableName The table name
      */
-    private void syncMetadata(String tableName) {
+    public void syncMetadata(String tableName) {
         try {
             ConnectionPool pool = ConnectionPool.getPool(userName, password, url);
             Connection connection = pool.getConnection();
 
             TableMetadata metadata = (TableMetadata)MetadataParser.parser(connection, tableName);
-
+            MongoDao.updateEntities(tableName, metadata);
 
         } catch (SQLException e) {
             e.printStackTrace();
