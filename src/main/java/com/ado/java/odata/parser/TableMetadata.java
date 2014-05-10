@@ -23,11 +23,14 @@ public class TableMetadata implements Metadata {
     private final Map<String, IndexMetadata> indexes = new HashMap<String, IndexMetadata>();
     private final Map<String, ForeignKeyMetadata> foreignKeys = new HashMap<String, ForeignKeyMetadata>();
 
+    private final Map<String, PrimaryKeyMetadata> primaryKeys = new HashMap<String, PrimaryKeyMetadata>();
+
     public TableMetadata(ResultSet rs, DatabaseMetaData meta, boolean extras) throws SQLException {
         category = rs.getString("TABLE_CAT");
         schema = rs.getString("TABLE_SCHEM");
         name = rs.getString("TABLE_NAME");
         initColumns(meta);
+        initPrimaryKey(meta);
         if (extras) {
             initIndexes(meta);
             initForeignKeys(meta);
@@ -44,6 +47,42 @@ public class TableMetadata implements Metadata {
 
     private ForeignKeyMetadata getForeignKeyMetadata(String foreignKeyName) {
         return foreignKeys.get(foreignKeyName.toLowerCase());
+    }
+
+    private PrimaryKeyMetadata getPrimaryKeyMetadata(String primaryKey) {
+        return primaryKeys.get(primaryKey.toLowerCase());
+    }
+
+    private void initPrimaryKey(DatabaseMetaData metaData) throws SQLException {
+        ResultSet rs = null;
+
+        try {
+            rs = metaData.getPrimaryKeys(category, schema, name);
+            while (rs.next()) {
+                addPrimaryKey(rs);
+            }
+        }
+        finally {
+            if (rs != null) {
+                rs.close();
+            }
+        }
+    }
+
+
+    private void addPrimaryKey(ResultSet rs) throws SQLException {
+        String name = rs.getString("PK_NAME");
+
+        if (name == null) {
+            return;
+        }
+        PrimaryKeyMetadata metadata = getPrimaryKeyMetadata(name);
+        if (metadata == null) {
+            metadata = new PrimaryKeyMetadata(rs);
+            primaryKeys.put(metadata.getName().toLowerCase(), metadata);
+        }
+
+        metadata.addColumn(getColumnMetadata(rs.getString("COLUMN_NAME")));
     }
 
     private void initColumns(DatabaseMetaData metaData) throws SQLException {
@@ -165,5 +204,9 @@ public class TableMetadata implements Metadata {
 
     public Map<String, ForeignKeyMetadata> getForeignKeys() {
         return foreignKeys;
+    }
+
+    public Map<String, PrimaryKeyMetadata> getPrimaryKeys() {
+        return primaryKeys;
     }
 }

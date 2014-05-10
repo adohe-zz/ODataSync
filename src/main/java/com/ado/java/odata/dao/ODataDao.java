@@ -46,11 +46,12 @@ public class ODataDao {
             TableMetadata metadata = (TableMetadata)MetadataParser.parser(connection, tableName);
 
             Map<String, ColumnMetadata> columns = metadata.getColumns();
+            Map<String, PrimaryKeyMetadata> pkMeta = metadata.getPrimaryKeys();
             Map<String, IndexMetadata> indexes = metadata.getIndexes();
             Map<String, ForeignKeyMetadata> fkMeta = metadata.getForeignKeys();
 
             // Update the entities collection
-            MongoManager mongoManager = MongoManager.getInstance("localhost", 27017, 10, 10);
+            /*MongoManager mongoManager = MongoManager.getInstance("localhost", 27017, 10, 10);
             DB odata = mongoManager.getDB("odata");
 
             // Fetch the entities collection
@@ -80,7 +81,7 @@ public class ODataDao {
             // Insert into collection
             entities.insert(object);
             Set<String> collections = odata.getCollectionNames();
-            System.out.println(collections.size());
+            System.out.println(collections.size());*/
         } catch (SQLException e) {
             e.printStackTrace();
         }
