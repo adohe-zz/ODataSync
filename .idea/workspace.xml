@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53900365-a49e-461b-9b7e-7c77746e5eee" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ado/java/odata/dao/MongoDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/ado/java/odata/dao/MongoDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ado/java/odata/dao/ODataDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/ado/java/odata/dao/ODataDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ado/java/odata/util/StringHelper.java" afterPath="$PROJECT_DIR$/src/main/java/com/ado/java/odata/util/StringHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/application.properties" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/application.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ODataSync.iws" />
@@ -32,12 +32,12 @@
     <file path="/application-config.xml" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1399215477994" ignored="false" />
     <file path="/ODataService.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1399714315242" ignored="false" />
     <file path="/ODataDao.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1399803462702" ignored="false" />
-    <file path="/application.properties" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1399559248562" ignored="false" />
+    <file path="/application.properties" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1399814330725" ignored="false" />
     <file path="/ColumnMetadata.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1399384599176" ignored="false" />
     <file path="/IndexMetadata.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1399384952908" ignored="false" />
     <file path="/ForeignKeyMetadata.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1399798034831" ignored="false" />
     <file path="/DatabaseMetadata.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1399388575534" ignored="false" />
-    <file path="/StringHelper.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1399800104888" ignored="false" />
+    <file path="/StringHelper.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1399814754277" ignored="false" />
     <file path="$PROJECT_DIR$/../IntellijIdea/Test/src/com/ado/java/WorkThread.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1399474695117" ignored="false" />
     <file path="/WorkThread.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1399474694406" ignored="false" />
     <file path="$PROJECT_DIR$/../IntellijIdea/Test/src/com/ado/java/ScheduledThreadPool.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1399475037467" ignored="false" />
@@ -146,10 +146,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MongoDao.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MongoDao.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/dao/MongoDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="88" selection-start="3078" selection-end="3078" vertical-scroll-proportion="0.41525424">
+            <state line="68" column="0" selection-start="2369" selection-end="2369" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="method#isFkRef#0;class#MongoDao#0" expanded="false" />
                 <element signature="method#getRefTable#0;class#MongoDao#0" expanded="false" />
@@ -159,10 +159,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StringHelper.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ConnectionPoolConfig.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/pool/ConnectionPoolConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="60" selection-start="406" selection-end="406" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.properties" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="34" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StringHelper.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/util/StringHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="41" selection-start="745" selection-end="745" vertical-scroll-proportion="0.0">
+            <state line="28" column="38" selection-start="817" selection-end="817" vertical-scroll-proportion="1.130597">
               <folding />
             </state>
           </provider>
@@ -208,7 +226,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/DatabaseMetadata.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/MetadataParser.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/mongo/MongoConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/mongo/MongoManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/PrimaryKeyMetadata.java" />
@@ -216,10 +233,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/service/impl/ODataServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/controller/ODataController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/TableMetadata.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/util/StringHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/ForeignKeyMetadata.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/dao/ODataDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/dao/MongoDao.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/util/StringHelper.java" />
       </list>
     </option>
   </component>
@@ -952,7 +970,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29659644" sideWeight="0.48776758" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5122324" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5122324" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1025,20 +1043,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/mongo/MongoManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="21" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="45" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/3.2.0.RELEASE/spring-web-3.2.0.RELEASE.jar!/org/springframework/web/bind/annotation/support/HandlerMethodInvoker.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="34" selection-start="1962" selection-end="1962" vertical-scroll-proportion="0.37438422" />
@@ -1095,13 +1099,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/util/StringHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="41" selection-start="745" selection-end="745" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/ForeignKeyMetadata.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="4" selection-start="954" selection-end="954" vertical-scroll-proportion="0.0">
@@ -1139,14 +1136,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/pool/ConnectionPoolConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="60" selection-start="406" selection-end="406" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="34" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/dao/MongoDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="88" selection-start="3078" selection-end="3078" vertical-scroll-proportion="0.41525424">
+        <state line="68" column="0" selection-start="2369" selection-end="2369" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="method#isFkRef#0;class#MongoDao#0" expanded="false" />
             <element signature="method#getRefTable#0;class#MongoDao#0" expanded="false" />
             <element signature="method#existsTable#0;class#MongoDao#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/util/StringHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="38" selection-start="817" selection-end="817" vertical-scroll-proportion="1.130597">
+          <folding />
         </state>
       </provider>
     </entry>

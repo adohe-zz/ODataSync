@@ -26,6 +26,7 @@ public class StringHelper {
         types.put("VARCHAR", "string");
         types.put("TIMESTAMP", "date");
         types.put("INT", "int");
+        types.put("DATETIME", "date");
     }
 
     public static String toUpperCase(String str) {
