@@ -21,6 +21,7 @@ public class ForeignKeyMetadata {
 
     private final String name;
     private final String refTable;
+
     private final Map<String, String> references = new HashMap<String, String>();
 
     public ForeignKeyMetadata(ResultSet rs) throws SQLException {
@@ -34,6 +35,10 @@ public class ForeignKeyMetadata {
 
     public String getRefTable() {
         return refTable;
+    }
+
+    public Map<String, String> getReferences() {
+        return references;
     }
 
     public void addReference(ResultSet rs) throws SQLException {

@@ -2,6 +2,7 @@ package com.ado.java.odata.dao;
 
 import com.ado.java.odata.mongo.MongoManager;
 import com.ado.java.odata.parser.ColumnMetadata;
+import com.ado.java.odata.parser.ForeignKeyMetadata;
 import com.ado.java.odata.parser.PrimaryKeyMetadata;
 import com.ado.java.odata.parser.TableMetadata;
 import com.ado.java.odata.util.StringHelper;
@@ -11,6 +12,7 @@ import com.mongodb.DBCollection;
 
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Created with IntelliJ IDEA.
@@ -32,6 +34,7 @@ public class MongoDao {
 
         Map<String, ColumnMetadata> columns = metadata.getColumns();
         Map<String, PrimaryKeyMetadata> pkMeta = metadata.getPrimaryKeys();
+        Map<String, ForeignKeyMetadata> fkMeta  = metadata.getForeignKeys();
 
         // Update the entities collection
         MongoManager mongoManager = MongoManager.getInstance("localhost", 27017, 10, 10);
@@ -64,12 +67,21 @@ public class MongoDao {
         Iterator clIterator = columns.entrySet().iterator();
         while (clIterator.hasNext()) {
             Map.Entry<String, ColumnMetadata> column = (Map.Entry<String, ColumnMetadata>)clIterator.next();
+            String ck = column.getKey();
             ColumnMetadata cMeta = column.getValue();
             if (cMeta.getName().equalsIgnoreCase(pkName))
                 continue;
             BasicDBObject c = new BasicDBObject();
-            c.append("type", StringHelper.getType(cMeta.getTypeName()))
-                .append("nullable", (cMeta.getNullable() == "YES" ? true : false));
+            if (isFkRef(fkMeta, ck)) {
+                String refTable = getRefTable(fkMeta, ck);
+                if (refTable != null) {
+                    c.append("type", refTable)
+                            .append("nullable", (cMeta.getNullable() == "YES" ? true : false));
+                }
+            } else {
+                c.append("type", StringHelper.getType(cMeta.getTypeName()))
+                        .append("nullable", (cMeta.getNullable() == "YES" ? true : false));
+            }
             properties.append(cMeta.getName(), c);
         }
 
@@ -79,5 +91,37 @@ public class MongoDao {
         // Insert into collection
         entities.insert(object);
         System.out.println("Meta data sync finish....");
+    }
+
+    private static boolean isFkRef(Map<String, ForeignKeyMetadata> fks, String key) {
+        Iterator iterator = fks.entrySet().iterator();
+
+        while (iterator.hasNext()) {
+            Map.Entry<String, ForeignKeyMetadata> fk = (Map.Entry<String, ForeignKeyMetadata>)iterator.next();
+            ForeignKeyMetadata fkMeta = fk.getValue();
+            Map<String, String> refs = fkMeta.getReferences();
+            Set<String> keys = refs.keySet();
+            if (keys.contains(key)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private static String getRefTable(Map<String, ForeignKeyMetadata> fks, String key) {
+        Iterator iterator = fks.entrySet().iterator();
+
+        while (iterator.hasNext()) {
+            Map.Entry<String, ForeignKeyMetadata> fk = (Map.Entry<String, ForeignKeyMetadata>)iterator.next();
+            ForeignKeyMetadata fkMeta = fk.getValue();
+            Map<String, String> refs = fkMeta.getReferences();
+            Set<String> keys = refs.keySet();
+            if (keys.contains(key)) {
+                return fkMeta.getRefTable();
+            }
+        }
+
+        return null;
     }
 }
