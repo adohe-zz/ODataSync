@@ -9,6 +9,7 @@ import com.ado.java.odata.util.StringHelper;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
+import com.mongodb.DBCursor;
 
 import java.util.Iterator;
 import java.util.Map;
@@ -69,9 +70,12 @@ public class MongoDao {
             Map.Entry<String, ColumnMetadata> column = (Map.Entry<String, ColumnMetadata>)clIterator.next();
             String ck = column.getKey();
             ColumnMetadata cMeta = column.getValue();
+            // Skip the primary key column
             if (cMeta.getName().equalsIgnoreCase(pkName))
                 continue;
             BasicDBObject c = new BasicDBObject();
+
+            // Handle foreign key column
             if (isFkRef(fkMeta, ck)) {
                 String refTable = getRefTable(fkMeta, ck);
                 if (refTable != null) {
@@ -123,5 +127,19 @@ public class MongoDao {
         }
 
         return null;
+    }
+
+    public static boolean existsTable(String tableName) {
+        MongoManager mongoManager = MongoManager.getInstance("localhost", 27017, 10, 10);
+        DB odata = mongoManager.getDB("odata");
+
+        DBCollection entities = odata.getCollection("entities");
+        BasicDBObject query = new BasicDBObject("Table", tableName);
+        DBCursor cursor = entities.find(query);
+        if (cursor.hasNext()) {
+            return true;
+        }
+
+        return false;
     }
 }
