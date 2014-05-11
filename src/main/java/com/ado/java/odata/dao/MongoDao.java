@@ -1,16 +1,16 @@
 package com.ado.java.odata.dao;
 
 import com.ado.java.odata.mongo.MongoManager;
-import com.ado.java.odata.parser.ColumnMetadata;
-import com.ado.java.odata.parser.ForeignKeyMetadata;
-import com.ado.java.odata.parser.PrimaryKeyMetadata;
-import com.ado.java.odata.parser.TableMetadata;
+import com.ado.java.odata.parser.*;
+import com.ado.java.odata.pool.ConnectionPool;
 import com.ado.java.odata.util.StringHelper;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
@@ -23,6 +23,7 @@ import java.util.Set;
  * To change this template use File | Settings | File Templates.
  */
 public class MongoDao {
+
 
     /**
      * Insert a new document into entities collection
@@ -44,10 +45,10 @@ public class MongoDao {
         // Fetch the entities collection
         DBCollection entities = odata.getCollection("entities");
 
-        // Create a new document
-        BasicDBObject object = new BasicDBObject("EntityName", "Buyer Insight")
-                .append("ProjectName", "FirstPro").append("Source", "buyer").append("Table", tableName)
-                .append("Cache", "no cache").append("Env", "dev").append("Status", "pending").append("RowCount", 0);
+        // Update the document
+        BasicDBObject query = new BasicDBObject("Table", tableName);
+
+        BasicDBObject object = new BasicDBObject();
         BasicDBObject properties = new BasicDBObject();
 
         // Reverse the primary key
@@ -68,32 +69,25 @@ public class MongoDao {
         Iterator clIterator = columns.entrySet().iterator();
         while (clIterator.hasNext()) {
             Map.Entry<String, ColumnMetadata> column = (Map.Entry<String, ColumnMetadata>)clIterator.next();
-            String ck = column.getKey();
             ColumnMetadata cMeta = column.getValue();
             // Skip the primary key column
             if (cMeta.getName().equalsIgnoreCase(pkName))
                 continue;
             BasicDBObject c = new BasicDBObject();
 
-            // Handle foreign key column
-            if (isFkRef(fkMeta, ck)) {
-                String refTable = getRefTable(fkMeta, ck);
-                if (refTable != null) {
-                    c.append("type", refTable)
-                            .append("nullable", (cMeta.getNullable() == "YES" ? true : false));
-                }
-            } else {
-                c.append("type", StringHelper.getType(cMeta.getTypeName()))
-                        .append("nullable", (cMeta.getNullable() == "YES" ? true : false));
-            }
+            c.append("type", StringHelper.getType(cMeta.getTypeName()))
+                    .append("nullable", (cMeta.getNullable() == "YES" ? true : false));
             properties.append(cMeta.getName(), c);
         }
 
         // Append the properties sub-document
-        object.append("Properties", properties);
+        object.put("Properties", properties);
+        object.put("Status", "running");
 
-        // Insert into collection
-        entities.insert(object);
+        BasicDBObject objectSetValue = new BasicDBObject("$set", object);
+
+        // Update the collection
+        entities.update(query, objectSetValue);
         System.out.println("Meta data sync finish....");
     }
 

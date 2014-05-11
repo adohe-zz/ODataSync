@@ -40,9 +40,6 @@ public class ODataDao {
      * @param tableName The table name
      */
     public void syncMetadata(String tableName) {
-        if (MongoDao.existsTable(tableName)) {
-            return;
-        }
 
         try {
             ConnectionPool pool = ConnectionPool.getPool(userName, password, url);
