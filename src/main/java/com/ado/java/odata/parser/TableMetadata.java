@@ -1,10 +1,12 @@
 package com.ado.java.odata.parser;
 
+import org.hibernate.mapping.ForeignKey;
+
 import java.sql.DatabaseMetaData;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
-import java.util.List;
+import java.util.Iterator;
 import java.util.Map;
 
 /**
@@ -47,6 +49,18 @@ public class TableMetadata implements Metadata {
 
     private ForeignKeyMetadata getForeignKeyMetadata(String foreignKeyName) {
         return foreignKeys.get(foreignKeyName.toLowerCase());
+    }
+
+    public ForeignKeyMetadata getForeignKeyMetadata(ForeignKey fk) {
+        Iterator iterator = foreignKeys.values().iterator();
+        while (iterator.hasNext()) {
+            ForeignKeyMetadata existingFk = (ForeignKeyMetadata)iterator.next();
+            if (existingFk.matches(fk)) {
+                return existingFk;
+            }
+        }
+
+        return null;
     }
 
     private PrimaryKeyMetadata getPrimaryKeyMetadata(String primaryKey) {
