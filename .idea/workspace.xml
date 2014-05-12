@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53900365-a49e-461b-9b7e-7c77746e5eee" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ado/java/odata/util/StringHelper.java" afterPath="$PROJECT_DIR$/src/main/java/com/ado/java/odata/util/StringHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/application.properties" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/application.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ODataSync.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1399777459014" ignored="false" />
+    <file path="/Dummy.txt" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1399909150522" ignored="false" />
     <file path="/web.xml" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1399213481563" ignored="false" />
     <file path="/servlet-context.xml" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1398530592015" ignored="false" />
     <file path="/ODataController.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1399727637030" ignored="false" />
@@ -46,6 +44,7 @@
     <file path="/MongoConfig.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1399701087376" ignored="false" />
     <file path="/PrimaryKeyMetadata.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1399713175261" ignored="false" />
     <file path="/MongoDao.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1399813919977" ignored="false" />
+    <file path="/AtomicFloat.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1399909236709" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,20 +118,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/ForeignKeyMetadata.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="42" column="4" selection-start="954" selection-end="954" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TableMetadata.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/TableMetadata.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="213" column="29" selection-start="5987" selection-end="5987" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -150,11 +136,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/dao/MongoDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="68" column="0" selection-start="2369" selection-end="2369" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="method#isFkRef#0;class#MongoDao#0" expanded="false" />
-                <element signature="method#getRefTable#0;class#MongoDao#0" expanded="false" />
-                <element signature="method#existsTable#0;class#MongoDao#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -177,11 +159,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StringHelper.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="StringHelper.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/util/StringHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="38" selection-start="817" selection-end="817" vertical-scroll-proportion="1.130597">
+            <state line="18" column="39" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AtomicFloat.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/util/AtomicFloat.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="4" selection-start="1449" selection-end="1449" vertical-scroll-proportion="1.4628099">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -222,7 +215,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/pool/Column.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/DatabaseMetadata.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/MetadataParser.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -238,6 +230,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/dao/MongoDao.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/util/StringHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/util/AtomicFloat.java" />
       </list>
     </option>
   </component>
@@ -662,8 +655,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -682,9 +675,9 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RunManager" selected="Tomcat Server.ODataTomcat">
     <configuration default="false" name="ConnectionPoolTest" type="JUnit" factoryName="JUnit" temporary="true">
@@ -757,6 +750,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -783,19 +789,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -961,7 +954,6 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -970,11 +962,12 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29659644" sideWeight="0.48776758" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5122324" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5122324" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1043,11 +1036,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/3.2.0.RELEASE/spring-web-3.2.0.RELEASE.jar!/org/springframework/web/bind/annotation/support/HandlerMethodInvoker.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="34" selection-start="1962" selection-end="1962" vertical-scroll-proportion="0.37438422" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/IndexMetadata.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="19" selection-start="907" selection-end="907" vertical-scroll-proportion="0.0">
@@ -1093,18 +1081,14 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/TableMetadata.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="213" column="29" selection-start="5987" selection-end="5987" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/ForeignKeyMetadata.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="4" selection-start="954" selection-end="954" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1153,18 +1137,23 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/dao/MongoDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="68" column="0" selection-start="2369" selection-end="2369" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="method#isFkRef#0;class#MongoDao#0" expanded="false" />
-            <element signature="method#getRefTable#0;class#MongoDao#0" expanded="false" />
-            <element signature="method#existsTable#0;class#MongoDao#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/util/StringHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="38" selection-start="817" selection-end="817" vertical-scroll-proportion="1.130597">
+        <state line="18" column="39" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/util/AtomicFloat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="4" selection-start="1449" selection-end="1449" vertical-scroll-proportion="1.4628099">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
