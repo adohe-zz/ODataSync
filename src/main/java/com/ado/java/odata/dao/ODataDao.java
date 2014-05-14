@@ -34,6 +34,9 @@ public class ODataDao {
     @Value("#{configProperties['db.url']}")
     private String url;
 
+    @Value("#{configProperties['db.sql']}")
+    private String sql;
+
     /**
      * Sync meta-data for a table
      *
@@ -62,45 +65,7 @@ public class ODataDao {
             ConnectionPool pool = ConnectionPool.getPool(userName, password, url);
             Connection connection = pool.getConnection();
 
-            TableMetadata metadata = (TableMetadata)MetadataParser.parser(connection, tableName);
-
-            Map<String, ColumnMetadata> columns = metadata.getColumns();
-            Map<String, PrimaryKeyMetadata> pkMeta = metadata.getPrimaryKeys();
-            Map<String, IndexMetadata> indexes = metadata.getIndexes();
-            Map<String, ForeignKeyMetadata> fkMeta = metadata.getForeignKeys();
-
-            // Update the entities collection
-            MongoManager mongoManager = MongoManager.getInstance("localhost", 27017, 10, 10);
-            DB odata = mongoManager.getDB("odata");
-
-            // Fetch the entities collection
-            DBCollection entities = odata.getCollection("entities");
-
-            // Create a new document
-            BasicDBObject object = new BasicDBObject("EntityName", "Buyer Insight")
-                    .append("ProjectName", "FirstPro").append("Source", "buyer").append("Table", tableName)
-                    .append("Cache", "no cache").append("Env", "dev").append("Status", "pending").append("RowCount", 0);
-            BasicDBObject properties = new BasicDBObject();
-
-            // Reverse the columns
-            Iterator iterator = columns.entrySet().iterator();
-            while (iterator.hasNext()) {
-                Map.Entry<String, ColumnMetadata> entry = (Map.Entry)iterator.next();
-                String key = entry.getKey();
-                ColumnMetadata columnMetadata = entry.getValue();
-
-                BasicDBObject column = new BasicDBObject();
-                column.append("type", columnMetadata.getTypeName())
-                    .append("nullable", columnMetadata.getNullable() == "YES" ? true : false);
-                properties.append(key, column);
-            }
-
-            object.append("Properties", properties);
-
-            // Insert into collection
-            entities.insert(object);
-            Set<String> collections = odata.getCollectionNames();
-            System.out.println(collections.size());
+            MongoDao.syncData(tableName, connection, sql);
         } catch (SQLException e) {
             e.printStackTrace();
         }
