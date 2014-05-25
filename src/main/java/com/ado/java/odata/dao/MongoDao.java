@@ -4,10 +4,7 @@ import com.ado.java.odata.mongo.MongoManager;
 import com.ado.java.odata.parser.*;
 import com.ado.java.odata.pool.ConnectionPool;
 import com.ado.java.odata.util.StringHelper;
-import com.mongodb.BasicDBObject;
-import com.mongodb.DB;
-import com.mongodb.DBCollection;
-import com.mongodb.DBCursor;
+import com.mongodb.*;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -180,20 +177,26 @@ public class MongoDao {
             DB odata = mongoManager.getDB("odata");
 
             // Fetch the entities collection
-            DBCollection collection = odata.getCollection("entities");
+            DBCollection collection = odata.getCollection("Schools");
 
-            BasicDBObject object = new BasicDBObject();
+            List<DBObject> documents = new ArrayList<DBObject>();
             Statement statement = connection.createStatement();
-            String s = sql + tableName;
+            String s = sql + " " + tableName;
 
             ResultSet rs = statement.executeQuery(s);
             while (rs.next()) {
+                BasicDBObject object = new BasicDBObject();
                 for (int i = 0; i < names.size(); i++) {
                     if (names.get(i).getName().equals(primaryKeyName)) {
                         object.append("id", rs.getString(names.get(i).getName()));
+                    } else {
+                        object.append(names.get(i).getName(), rs.getString(names.get(i).getName()));
                     }
                 }
+                documents.add(object);
             }
+            collection.insert(documents);
+            System.out.println("Data sync finished, insert " + documents.size() + " documents....");
         } catch (SQLException e) {
             e.printStackTrace();
         }

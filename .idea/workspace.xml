@@ -3,13 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="53900365-a49e-461b-9b7e-7c77746e5eee" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ado/java/odata/dao/MongoDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/ado/java/odata/dao/MongoDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ado/java/odata/dao/ODataDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/ado/java/odata/dao/ODataDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/application.properties" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/application.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ODataSync.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1399909150522" ignored="false" />
+    <file path="/Dummy.txt" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1400991656460" ignored="false" />
     <file path="/web.xml" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1399213481563" ignored="false" />
     <file path="/servlet-context.xml" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1398530592015" ignored="false" />
     <file path="/ODataController.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1399727637030" ignored="false" />
@@ -46,7 +44,7 @@
     <file path="/MongoManager.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1399701887737" ignored="false" />
     <file path="/MongoConfig.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1399701087376" ignored="false" />
     <file path="/PrimaryKeyMetadata.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1399713175261" ignored="false" />
-    <file path="/MongoDao.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1400078094023" ignored="false" />
+    <file path="/MongoDao.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1401006780386" ignored="false" />
     <file path="/AtomicFloat.java" changelist="53900365-a49e-461b-9b7e-7c77746e5eee" time="1399909236709" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,6 +60,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -98,7 +97,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -111,16 +109,43 @@
       <file leaf-file-name="ODataServiceImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/service/impl/ODataServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="24" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0">
+            <state line="22" column="22" selection-start="607" selection-end="607" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ODataDao.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ODataDao.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/dao/ODataDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="56" selection-start="1898" selection-end="1898" vertical-scroll-proportion="1.3432835">
+            <state line="58" column="63" selection-start="1536" selection-end="1536" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ForeignKeyMetadata.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/ForeignKeyMetadata.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="52" column="29" selection-start="1366" selection-end="1366" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ColumnMetadata.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/ColumnMetadata.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="0" selection-start="1012" selection-end="1012" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TableMetadata.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/TableMetadata.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="201" column="36" selection-start="5782" selection-end="5782" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -129,32 +154,20 @@
       <file leaf-file-name="ConnectionPool.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/pool/ConnectionPool.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="230" column="35" selection-start="8627" selection-end="8627" vertical-scroll-proportion="0.0">
+            <state line="149" column="12" selection-start="4989" selection-end="4989" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MongoDao.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MongoDao.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/dao/MongoDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="192" column="52" selection-start="7312" selection-end="7312" vertical-scroll-proportion="0.0">
+            <state line="180" column="64" selection-start="6784" selection-end="6784" vertical-scroll-proportion="0.6666667">
               <folding>
-                <element signature="method#isFkRef#0;class#MongoDao#0" expanded="false" />
-                <element signature="method#getRefTable#0;class#MongoDao#0" expanded="false" />
-                <element signature="docComment;method#existsTable#0;class#MongoDao#0" expanded="false" />
-                <element signature="method#existsTable#0;class#MongoDao#0" expanded="false" />
-                <element signature="e#6324#6340#0" expanded="true" />
+                <element signature="e#6227#6243#0" expanded="true" />
+                <element signature="e#6837#6847#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConnectionPoolConfig.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/pool/ConnectionPoolConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="60" selection-start="406" selection-end="406" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -162,28 +175,8 @@
       <file leaf-file-name="application.properties" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="23" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0">
+            <state line="3" column="22" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StringHelper.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/util/StringHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="39" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AtomicFloat.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/util/AtomicFloat.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="25" selection-start="394" selection-end="394" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -191,16 +184,16 @@
       <file leaf-file-name="ODataController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/controller/ODataController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="40" selection-start="831" selection-end="831" vertical-scroll-proportion="0.0">
+            <state line="30" column="26" selection-start="881" selection-end="881" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MongoManager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/mongo/MongoManager.java">
+      <file leaf-file-name="ODataService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/service/ODataService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="19" selection-start="479" selection-end="479" vertical-scroll-proportion="0.0">
+            <state line="11" column="9" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -224,7 +217,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/DatabaseMetadata.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/MetadataParser.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/mongo/MongoConfig.java" />
@@ -239,6 +231,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/util/AtomicFloat.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/dao/ODataDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/ColumnMetadata.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ado/java/odata/dao/MongoDao.java" />
       </list>
     </option>
@@ -317,18 +310,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mvc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -443,10 +424,6 @@
               <option name="myItemId" value="odata" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -509,126 +486,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ODataSync" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ODataSync" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="odata" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ODataSync" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ODataSync" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="odata" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parser" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ODataSync" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ODataSync" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="odata" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mongo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ODataSync" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ODataSync" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="odata" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -963,6 +820,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -971,12 +829,11 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29659644" sideWeight="0.48776758" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5122324" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5122324" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1045,25 +902,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/PrimaryKeyMetadata.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="35" selection-start="630" selection-end="630" vertical-scroll-proportion="0.5472637">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#468#484#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/DatabaseMetadata.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="29" selection-start="427" selection-end="427" vertical-scroll-proportion="0.43882546">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.1940298">
@@ -1071,32 +909,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/TableMetadata.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="213" column="29" selection-start="5987" selection-end="5987" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/ForeignKeyMetadata.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="4" selection-start="954" selection-end="954" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/service/ODataService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="9" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/pool/ConnectionPoolConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="60" selection-start="406" selection-end="406" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="18" column="60" selection-start="406" selection-end="406" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/util/StringHelper.java">
@@ -1108,11 +923,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/util/AtomicFloat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="25" selection-start="394" selection-end="394" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="16" column="25" selection-start="394" selection-end="394" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/mongo/MongoManager.java">
@@ -1122,51 +933,83 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/controller/ODataController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/MetadataParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="40" selection-start="831" selection-end="831" vertical-scroll-proportion="0.0">
+        <state line="16" column="13" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/service/impl/ODataServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/ForeignKeyMetadata.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="24" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0">
+        <state line="52" column="29" selection-start="1366" selection-end="1366" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/TableMetadata.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="201" column="36" selection-start="5782" selection-end="5782" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/parser/ColumnMetadata.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="0" selection-start="1012" selection-end="1012" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/pool/ConnectionPool.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="230" column="35" selection-start="8627" selection-end="8627" vertical-scroll-proportion="0.0">
+        <state line="149" column="12" selection-start="4989" selection-end="4989" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="23" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0">
+        <state line="3" column="22" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/service/ODataService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="9" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/service/impl/ODataServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="22" selection-start="607" selection-end="607" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/controller/ODataController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="26" selection-start="881" selection-end="881" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/dao/ODataDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="63" selection-start="1536" selection-end="1536" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/dao/MongoDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="192" column="52" selection-start="7312" selection-end="7312" vertical-scroll-proportion="0.0">
+        <state line="180" column="64" selection-start="6784" selection-end="6784" vertical-scroll-proportion="0.6666667">
           <folding>
-            <element signature="method#isFkRef#0;class#MongoDao#0" expanded="false" />
-            <element signature="method#getRefTable#0;class#MongoDao#0" expanded="false" />
-            <element signature="docComment;method#existsTable#0;class#MongoDao#0" expanded="false" />
-            <element signature="method#existsTable#0;class#MongoDao#0" expanded="false" />
-            <element signature="e#6324#6340#0" expanded="true" />
+            <element signature="e#6227#6243#0" expanded="true" />
+            <element signature="e#6837#6847#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ado/java/odata/dao/ODataDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="56" selection-start="1898" selection-end="1898" vertical-scroll-proportion="1.3432835">
-          <folding />
         </state>
       </provider>
     </entry>
