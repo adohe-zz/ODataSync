@@ -27,8 +27,8 @@ public class ODataController {
 
     @RequestMapping( value = "data")
     @ResponseBody
-    public String syncDataForTable(@RequestParam String name) {
-        oDataService.syncData(name);
+    public String syncDataForTable(@RequestParam String name, @RequestParam String collection) {
+        oDataService.syncData(name, collection);
         return "ok";
     }
 

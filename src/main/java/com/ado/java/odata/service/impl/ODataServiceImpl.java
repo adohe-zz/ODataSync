@@ -19,8 +19,8 @@ public class ODataServiceImpl implements ODataService {
     private ODataDao oDataDao;
 
     @Override
-    public void syncData(String tableName) {
-        oDataDao.syncData(tableName);
+    public void syncData(String tableName, String collection) {
+        oDataDao.syncData(tableName, collection);
     }
 
     @Override

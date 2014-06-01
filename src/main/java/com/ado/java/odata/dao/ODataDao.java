@@ -60,12 +60,12 @@ public class ODataDao {
      * Sync data for {@link java.lang.String} table name
      * @param tableName The table name
      */
-    public void syncData(String tableName) {
+    public void syncData(String tableName, String collection) {
         try {
             ConnectionPool pool = ConnectionPool.getPool(userName, password, url);
             Connection connection = pool.getConnection();
 
-            MongoDao.syncData(tableName, connection, sql);
+            MongoDao.syncData(tableName, collection, connection, sql);
         } catch (SQLException e) {
             e.printStackTrace();
         }

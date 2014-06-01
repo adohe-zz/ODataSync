@@ -145,7 +145,7 @@ public class MongoDao {
      * @param connection {@link java.sql.Connection} a valid connection
      * @param sql {@link java.lang.String} sql string
      */
-    public static void syncData(String tableName, Connection connection, String sql) {
+    public static void syncData(String tableName, String collectionName, Connection connection, String sql) {
         if (tableName == null) {
             return;
         }
@@ -177,7 +177,7 @@ public class MongoDao {
             DB odata = mongoManager.getDB("odata");
 
             // Fetch the entities collection
-            DBCollection collection = odata.getCollection("Schools");
+            DBCollection collection = odata.getCollection(collectionName);
 
             List<DBObject> documents = new ArrayList<DBObject>();
             Statement statement = connection.createStatement();
@@ -196,6 +196,15 @@ public class MongoDao {
                 documents.add(object);
             }
             collection.insert(documents);
+            // Update the entity status and row count
+            collection = odata.getCollection("entities");
+            BasicDBObject query = new BasicDBObject("Table", tableName);
+            BasicDBObject object = new BasicDBObject();
+            object.put("Status", "completed");
+            object.put("RowCount", documents.size());
+            object.put("LastUpdate", new Date());
+            BasicDBObject objectSetValue = new BasicDBObject("$set", object);
+            collection.update(query, objectSetValue);
             System.out.println("Data sync finished, insert " + documents.size() + " documents....");
         } catch (SQLException e) {
             e.printStackTrace();
