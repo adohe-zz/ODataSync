@@ -9,6 +9,7 @@ public class PrimaryKeyMetadata {
 
     private final String name;
     private final short keySeq;
+
     private final List<ColumnMetadata> columnMetadata = new ArrayList<ColumnMetadata>();
 
     public PrimaryKeyMetadata(ResultSet rs) throws SQLException {
@@ -25,7 +26,7 @@ public class PrimaryKeyMetadata {
     }
 
     public ColumnMetadata[] getColumnMetadata() {
-        return (ColumnMetadata[])columnMetadata.toArray(new ColumnMetadata[0]);
+        return columnMetadata.toArray(new ColumnMetadata[0]);
     }
 
     public void addColumn(ColumnMetadata metadata) {

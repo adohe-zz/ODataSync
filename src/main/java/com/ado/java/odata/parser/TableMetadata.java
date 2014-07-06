@@ -14,6 +14,7 @@ public class TableMetadata implements Metadata {
     private final String category;
     private final String schema;
     private final String name;
+
     private final Map<String, ColumnMetadata> columns = new HashMap<String, ColumnMetadata>();
     private final Map<String, IndexMetadata> indexes = new HashMap<String, IndexMetadata>();
     private final Map<String, ForeignKeyMetadata> foreignKeys = new HashMap<String, ForeignKeyMetadata>();

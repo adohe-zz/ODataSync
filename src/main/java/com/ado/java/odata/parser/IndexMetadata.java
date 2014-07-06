@@ -25,7 +25,7 @@ public class IndexMetadata {
     }
 
     public ColumnMetadata[] getColumns() {
-        return (ColumnMetadata[])columns.toArray(new ColumnMetadata[0]);
+        return columns.toArray(new ColumnMetadata[0]);
     }
 
     @Override

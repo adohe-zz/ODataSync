@@ -39,7 +39,7 @@ public class ForeignKeyMetadata {
     }
 
     private boolean hasReference(Column column, Column ref) {
-        String reference = (String)references.get(column.getName().toLowerCase());
+        String reference = references.get(column.getName().toLowerCase());
         return ref.getName().equalsIgnoreCase(reference);
     }
 
