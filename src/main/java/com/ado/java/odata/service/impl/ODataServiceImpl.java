@@ -5,13 +5,6 @@ import com.ado.java.odata.service.ODataService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-/**
- * Created with IntelliJ IDEA.
- * User: nankonami
- * Date: 14-4-27
- * Time: 上午1:06
- * To change this template use File | Settings | File Templates.
- */
 @Service("odataservice")
 public class ODataServiceImpl implements ODataService {
 

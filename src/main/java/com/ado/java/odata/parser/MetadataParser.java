@@ -7,13 +7,6 @@ import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.SQLException;
 
-/**
- * Created with IntelliJ IDEA.
- * User: nankonami
- * Date: 14-4-28
- * Time: 下午11:20
- * To change this template use File | Settings | File Templates.
- */
 public class MetadataParser {
 
     /**

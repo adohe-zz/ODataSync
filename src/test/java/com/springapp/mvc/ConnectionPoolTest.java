@@ -21,16 +21,16 @@ public class ConnectionPoolTest {
     @Before
     public void setUp() throws Exception {
         ConnectionPoolConfig config = new ConnectionPoolConfig(true);
-        //connectionPool = new ConnectionPool(config, "root", "root", "jdbc:mysql//localhost:3306/wecampus_dev");
+        connectionPool = ConnectionPool.getPool("<USERNAME>", "<PASSWORD>", "<CONNECTION_STRING>");
     }
 
     @Test
     public void testGetConnection() throws Exception {
-        /*Connection connection = connectionPool.getConnection();
+        Connection connection = connectionPool.getConnection();
         if (connection != null) {
             System.out.println(connection.getCatalog());
         } else {
             System.out.println("null connection");
-        }*/
+        }
     }
 }

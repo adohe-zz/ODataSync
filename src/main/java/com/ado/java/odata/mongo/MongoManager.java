@@ -6,13 +6,6 @@ import com.mongodb.MongoOptions;
 
 import java.net.UnknownHostException;
 
-/**
- * Created with IntelliJ IDEA.
- * User: nankonami
- * Date: 14-5-10
- * Time: 下午12:58
- * To change this template use File | Settings | File Templates.
- */
 public class MongoManager {
 
     private static volatile MongoManager instance = null;

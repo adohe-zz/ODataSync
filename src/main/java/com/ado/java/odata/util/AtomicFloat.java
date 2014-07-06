@@ -2,13 +2,7 @@ package com.ado.java.odata.util;
 
 import java.util.concurrent.atomic.AtomicInteger;
 import static java.lang.Float.*;
-/**
- * Created with IntelliJ IDEA.
- * User: nankonami
- * Date: 14-5-12
- * Time: 下午11:39
- * To change this template use File | Settings | File Templates.
- */
+
 public class AtomicFloat extends Number {
 
     private AtomicInteger bits;

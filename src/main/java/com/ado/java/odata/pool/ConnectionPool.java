@@ -13,13 +13,6 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
-/**
- * Created with IntelliJ IDEA.
- * User: nankonami
- * Date: 14-4-27
- * Time: 下午2:34
- * To change this template use File | Settings | File Templates.
- */
 public class ConnectionPool implements Pool {
 
     /**

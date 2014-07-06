@@ -10,13 +10,6 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-/**
- * Created with IntelliJ IDEA.
- * User: nankonami
- * Date: 14-5-6
- * Time: 下午10:31
- * To change this template use File | Settings | File Templates.
- */
 public class DatabaseMetadata {
 
     private final boolean extras;

@@ -1,27 +1,14 @@
 package com.ado.java.odata.dao;
 
-import com.ado.java.odata.mongo.MongoManager;
-import com.ado.java.odata.parser.*;
+import com.ado.java.odata.parser.MetadataParser;
+import com.ado.java.odata.parser.TableMetadata;
 import com.ado.java.odata.pool.ConnectionPool;
-import com.mongodb.BasicDBObject;
-import com.mongodb.DB;
-import com.mongodb.DBCollection;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
 
-/**
- * Created with IntelliJ IDEA.
- * User: nankonami
- * Date: 14-5-4
- * Time: 下午10:29
- * To change this template use File | Settings | File Templates.
- */
 @Component
 public class ODataDao {
 

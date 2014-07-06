@@ -2,13 +2,6 @@ package com.ado.java.odata.pool;
 
 import java.util.Properties;
 
-/**
- * Created with IntelliJ IDEA.
- * User: nankonami
- * Date: 14-4-27
- * Time: 下午2:59
- * To change this template use File | Settings | File Templates.
- */
 public interface Config {
 
     /**
